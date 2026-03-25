@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>无障碍文本轮播</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="text-carousel" aria-label="无障碍文本轮播">
+      <div class="carousel-header">
+        <h2 id="carousel-title">重点内容轮播</h2>
+        <p id="carousel-desc" class="carousel-desc">
+          该组件会自动轮播。你可以使用“上一条”“下一条”按钮，或通过键盘方向键进行切换，也可以暂停自动播放。
+        </p>
+      </div>
+
+      <div class="carousel-region" role="region" aria-labelledby="carousel-title"
+        aria-describedby="carousel-desc carousel-instruction">
+        <p id="carousel-instruction" class="sr-only">
+          使用左方向键或上方向键查看上一条，使用右方向键或下方向键查看下一条，按空格键可暂停或继续自动播放。
+        </p>
+
+        <div class="carousel-viewport" tabindex="0" aria-roledescription="carousel" aria-label="文本轮播区域">
+          <ul class="carousel-track" id="carouselTrack" aria-live="polite"></ul>
+        </div>
+
+        <div class="carousel-controls">
+          <button type="button" class="control-btn" id="prevBtn" aria-label="显示上一条内容">
+            上一条
+          </button>
+
+          <button type="button" class="control-btn" id="toggleBtn" aria-pressed="false" aria-label="暂停自动播放">
+            暂停
+          </button>
+
+          <button type="button" class="control-btn" id="nextBtn" aria-label="显示下一条内容">
+            下一条
+          </button>
+        </div>
+
+        <div class="status-row">
+          <p class="status-text" id="statusText" aria-live="polite">
+            当前为第 2 条可见内容中的高亮项
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
