@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vertical Carousel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="carousel-component" id="carouselComponent" aria-label="Motivational text carousel">
+    <!-- 左侧文本展示区 -->
+    <div class="carousel" id="carousel" tabindex="0" aria-label="Text carousel">
+      <div class="carousel-track" id="carouselTrack"></div>
+    </div>
+
+    <!-- 右侧控制区 -->
+    <div class="controls" aria-label="Carousel controls">
+      <button id="toggleBtn" class="toggle-btn" type="button" aria-label="Pause autoplay" aria-pressed="false">
+        <span class="toggle-icon" id="toggleIcon">⏸</span>
+      </button>
+
+      <div id="dotNav" class="dots" role="tablist" aria-label="Choose a message"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
